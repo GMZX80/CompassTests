@@ -145,6 +145,42 @@
         "name": "Needle.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "img/compass-rose-mosaic-medallion.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "img\\compass-rose-mosaic-medallion.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "img/Needle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "img\\Needle.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "img/COmpas.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "img\\COmpas.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "img/compass-needle-png-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "img\\compass-needle-png-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -185,13 +221,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 881,
+          "height": 868,
           "layer": "",
           "locked": false,
           "name": "RomanCompass",
-          "width": 880,
-          "x": -138,
-          "y": -143,
+          "width": 835,
+          "x": -115,
+          "y": -135,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -199,99 +235,26 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 702,
           "layer": "",
           "locked": false,
-          "name": "RomadnNeedle",
-          "width": 0,
-          "x": -110,
-          "y": -186,
-          "zOrder": 3,
-          "numberProperties": [],
+          "name": "OldNeedle",
+          "width": 520,
+          "x": 51,
+          "y": -49,
+          "zOrder": 5,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "name": "compass",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 1,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "compass.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "needle",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 1,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "needle.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "name": "RomanCompass",
           "tags": "",
@@ -310,7 +273,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "compass-rose-mosaic-medallion.jpg",
+                      "image": "img\\COmpas.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -332,7 +295,7 @@
           ]
         },
         {
-          "name": "RomadnNeedle",
+          "name": "OldNeedle",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -349,7 +312,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Needle.png",
+                      "image": "img\\compass-needle-png-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -427,7 +390,7 @@
                 "value": "SetAngle"
               },
               "parameters": [
-                "RomadnNeedle",
+                "OldNeedle",
                 "=",
                 "DeviceSensors::OrientationAlpha()"
               ],
