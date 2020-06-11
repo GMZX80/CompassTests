@@ -25,7 +25,11 @@ gdjs.NewSceneCode.condition0IsTrue_0.val = false;
 {
 gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.NewSceneCode.condition0IsTrue_0.val) {
+gdjs.NewSceneCode.GDOldNeedleObjects1.createFrom(runtimeScene.getObjects("OldNeedle"));
 {gdjs.deviceSensors.orientation.activateOrientationSensor();
+}{for(var i = 0, len = gdjs.NewSceneCode.GDOldNeedleObjects1.length ;i < len;++i) {
+    gdjs.NewSceneCode.GDOldNeedleObjects1[i].setAngle(90);
+}
 }}
 
 }

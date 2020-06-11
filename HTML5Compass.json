@@ -190,6 +190,15 @@
         "name": "img\\NeedleU.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "img/okneedle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "img\\okneedle.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -321,7 +330,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "img\\NeedleU.png",
+                      "image": "img\\okneedle.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -382,6 +391,18 @@
                 "value": "DeviceSensors::ActivateOrientationListener"
               },
               "parameters": [],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "OldNeedle",
+                "=",
+                "90"
+              ],
               "subInstructions": []
             }
           ],
