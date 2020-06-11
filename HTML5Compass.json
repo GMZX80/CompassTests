@@ -181,6 +181,15 @@
         "name": "img\\compass-needle-png-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "img/NeedleU.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "img\\NeedleU.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -241,7 +250,7 @@
           "locked": false,
           "name": "OldNeedle",
           "width": 520,
-          "x": 51,
+          "x": 42,
           "y": -49,
           "zOrder": 5,
           "numberProperties": [
@@ -312,7 +321,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "img\\compass-needle-png-1.png",
+                      "image": "img\\NeedleU.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
