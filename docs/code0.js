@@ -3,6 +3,10 @@ gdjs.NewSceneCode.GDcompassObjects1= [];
 gdjs.NewSceneCode.GDcompassObjects2= [];
 gdjs.NewSceneCode.GDneedleObjects1= [];
 gdjs.NewSceneCode.GDneedleObjects2= [];
+gdjs.NewSceneCode.GDRomanCompassObjects1= [];
+gdjs.NewSceneCode.GDRomanCompassObjects2= [];
+gdjs.NewSceneCode.GDRomadnNeedleObjects1= [];
+gdjs.NewSceneCode.GDRomadnNeedleObjects2= [];
 
 gdjs.NewSceneCode.conditionTrue_0 = {val:false};
 gdjs.NewSceneCode.condition0IsTrue_0 = {val:false};
@@ -35,9 +39,9 @@ gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustB
 
 
 {
-gdjs.NewSceneCode.GDneedleObjects1.createFrom(runtimeScene.getObjects("needle"));
-{for(var i = 0, len = gdjs.NewSceneCode.GDneedleObjects1.length ;i < len;++i) {
-    gdjs.NewSceneCode.GDneedleObjects1[i].setAngle(gdjs.deviceSensors.orientation.getOrientationAlpha());
+gdjs.NewSceneCode.GDRomadnNeedleObjects1.createFrom(runtimeScene.getObjects("RomadnNeedle"));
+{for(var i = 0, len = gdjs.NewSceneCode.GDRomadnNeedleObjects1.length ;i < len;++i) {
+    gdjs.NewSceneCode.GDRomadnNeedleObjects1[i].setAngle(gdjs.deviceSensors.orientation.getOrientationAlpha());
 }
 }}
 
@@ -54,6 +58,10 @@ gdjs.NewSceneCode.GDcompassObjects1.length = 0;
 gdjs.NewSceneCode.GDcompassObjects2.length = 0;
 gdjs.NewSceneCode.GDneedleObjects1.length = 0;
 gdjs.NewSceneCode.GDneedleObjects2.length = 0;
+gdjs.NewSceneCode.GDRomanCompassObjects1.length = 0;
+gdjs.NewSceneCode.GDRomanCompassObjects2.length = 0;
+gdjs.NewSceneCode.GDRomadnNeedleObjects1.length = 0;
+gdjs.NewSceneCode.GDRomadnNeedleObjects2.length = 0;
 
 gdjs.NewSceneCode.eventsList0x5b71c8(runtimeScene);
 return;

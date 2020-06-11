@@ -118,6 +118,33 @@
         "name": "needle.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "compass-rose-mosaic-medallion.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "compass-rose-mosaic-medallion.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Spear.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spear.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Needle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Needle.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -150,21 +177,21 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 0.61
       },
       "objectsGroups": [],
       "variables": [],
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 881,
           "layer": "",
           "locked": false,
-          "name": "compass",
-          "width": 0,
-          "x": 16,
-          "y": 0,
+          "name": "RomanCompass",
+          "width": 880,
+          "x": -141,
+          "y": -144,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -176,11 +203,11 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "needle",
+          "name": "RomadnNeedle",
           "width": 0,
-          "x": 16,
-          "y": 0,
-          "zOrder": 2,
+          "x": -108,
+          "y": -187,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -264,6 +291,84 @@
               ]
             }
           ]
+        },
+        {
+          "name": "RomanCompass",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "compass-rose-mosaic-medallion.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RomadnNeedle",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Needle.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -322,7 +427,7 @@
                 "value": "SetAngle"
               },
               "parameters": [
-                "needle",
+                "RomadnNeedle",
                 "=",
                 "DeviceSensors::OrientationAlpha()"
               ],
