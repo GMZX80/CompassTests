@@ -249,7 +249,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.16
+        "zoomFactor": 0.28
       },
       "objectsGroups": [],
       "variables": [],
@@ -257,13 +257,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 868,
+          "height": 1358,
           "layer": "",
           "locked": false,
           "name": "RomanCompass",
-          "width": 835,
-          "x": 135,
-          "y": 5,
+          "width": 1590,
+          "x": -263,
+          "y": -143,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
