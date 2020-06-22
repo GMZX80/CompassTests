@@ -349,7 +349,7 @@
           "animations": []
         },
         {
-          "bold": true,
+          "bold": false,
           "italic": false,
           "name": "GPSOutput",
           "smoothed": true,
@@ -367,7 +367,7 @@
           ],
           "string": "Lattitude and Longitude readout",
           "font": "Roman SD.ttf",
-          "characterSize": 30,
+          "characterSize": 20,
           "color": {
             "b": 0,
             "g": 0,
