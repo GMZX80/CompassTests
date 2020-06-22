@@ -606,7 +606,7 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\nvar localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n    localCompass.setNumber(poasition.heading);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
+                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\nvar localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n    localCompass.setNumber(position.heading);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
                       "parameterObjects": "",
                       "useStrict": true
                     }
