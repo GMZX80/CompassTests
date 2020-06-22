@@ -654,7 +654,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "runtimeScene.setBackgroundColor(100,100,240);\n\nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  window.addEventListener('deviceorientation', function(event) {\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localLong.setNumber(5);\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      //localCmpass = event.webkitCompassHeading;  \n    }\n    //else localCompass = event.alpha;\n  });\n}",
+                  "inlineCode": "runtimeScene.setBackgroundColor(100,100,240);\n\nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  window.addEventListener('deviceorientation', function(event) {\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(5);\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      //localCmpass = event.webkitCompassHeading;  \n    }\n    //else localCompass = event.alpha;\n  });\n}",
                   "parameterObjects": "",
                   "useStrict": true
                 }
