@@ -392,7 +392,7 @@
           "comment2": ""
         },
         {
-          "disabled": true,
+          "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -407,20 +407,11 @@
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DeviceSensors::ActivateOrientationListener"
-              },
-              "parameters": [],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": []
         },
         {
-          "disabled": true,
+          "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -606,11 +597,66 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\nvar localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n    localCompass.setNumber(poasition.heading);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
+                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
                       "parameterObjects": "",
                       "useStrict": true
                     }
                   ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "GeoLocation::Compass",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "runtimeScene.setBackgroundColor(100,100,240);\n\nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  window.addEventListener('deviceorientation', function(event) {\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localLong.setNumber(5);\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      //localCmpass = event.webkitCompassHeading;  \n    }\n    //else localCompass = event.alpha;\n  });\n}",
+                  "parameterObjects": "",
+                  "useStrict": true
                 }
               ],
               "parameters": [
