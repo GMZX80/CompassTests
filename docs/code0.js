@@ -36,11 +36,7 @@ gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustB
 
 
 {
-gdjs.NewSceneCode.GDRomanCompassObjects1.createFrom(runtimeScene.getObjects("RomanCompass"));
-{for(var i = 0, len = gdjs.NewSceneCode.GDRomanCompassObjects1.length ;i < len;++i) {
-    gdjs.NewSceneCode.GDRomanCompassObjects1[i].setAngle(gdjs.deviceSensors.orientation.getOrientationAlpha());
 }
-}}
 
 }
 
