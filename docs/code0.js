@@ -8,7 +8,6 @@ gdjs.NewSceneCode.GDGPSOutputObjects2= [];
 
 gdjs.NewSceneCode.conditionTrue_0 = {val:false};
 gdjs.NewSceneCode.condition0IsTrue_0 = {val:false};
-gdjs.NewSceneCode.condition1IsTrue_0 = {val:false};
 
 
 gdjs.NewSceneCode.eventsList0x5b7338 = function(runtimeScene) {
@@ -23,12 +22,6 @@ gdjs.NewSceneCode.eventsList0x5b7338 = function(runtimeScene) {
 {
 
 
-gdjs.NewSceneCode.condition0IsTrue_0.val = false;
-{
-gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.NewSceneCode.condition0IsTrue_0.val) {
-{gdjs.deviceSensors.orientation.activateOrientationSensor();
-}}
 
 }
 
@@ -36,12 +29,6 @@ gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustB
 {
 
 
-{
-gdjs.NewSceneCode.GDRomanCompassObjects1.createFrom(runtimeScene.getObjects("RomanCompass"));
-{for(var i = 0, len = gdjs.NewSceneCode.GDRomanCompassObjects1.length ;i < len;++i) {
-    gdjs.NewSceneCode.GDRomanCompassObjects1[i].setAngle(gdjs.deviceSensors.orientation.getOrientationAlpha());
-}
-}}
 
 }
 
