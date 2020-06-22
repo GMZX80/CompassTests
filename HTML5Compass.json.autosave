@@ -606,19 +606,11 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
+                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\nvar localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n    localCompass.setNumber(poasition.heading);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
                       "parameterObjects": "",
                       "useStrict": true
                     }
                   ]
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "runtimeScene.setBackgroundColor(100,100,240);\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  window.addEventListener('deviceorientation', function(event) {\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      localCompass = event.webkitCompassHeading;  \n    }\n    else compassdir = event.alpha;\n  });\n}\n",
-                  "parameterObjects": "",
-                  "useStrict": true
                 }
               ],
               "parameters": [
