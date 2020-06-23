@@ -35,8 +35,15 @@ gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustB
 {
 
 
+gdjs.NewSceneCode.condition0IsTrue_0.val = false;
 {
+gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.input.popStartedTouch(runtimeScene);
+}if (gdjs.NewSceneCode.condition0IsTrue_0.val) {
+gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOutput"));
+{for(var i = 0, len = gdjs.NewSceneCode.GDGPSOutputObjects1.length ;i < len;++i) {
+    gdjs.NewSceneCode.GDGPSOutputObjects1[i].getBehavior("Compass").ActivateCompass((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
+}}
 
 }
 

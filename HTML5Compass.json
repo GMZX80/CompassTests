@@ -414,8 +414,32 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PopStartedTouch"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "GeoLocation::Compass::ActivateCompass"
+              },
+              "parameters": [
+                "GPSOutput",
+                "Compass",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
@@ -641,7 +665,62 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "runtimeScene.setBackgroundColor(100,70,200);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);     \n  } else {\n      var alpha = 360 - event.alpha;\n      if (alpha < 0) { alpha += 360; }\n      if (alpha > 360) { alpha -= 360; }\n      localCompass.setNumber(alpha); \n  }\n}\n  if (window.DeviceOrientationEvent){\n    if ('ondeviceorientationabsolute' in window) {\n      const obj = eventsFunctionContext.getObjects('Object');\n      var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n      window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n    }\n  } else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n  }\n/*\nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  // check for Android or ios version (ios uses webkitcompassheading)\n  if (window.OnDeviceOrientationAbsolute) {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(100); \n  } else if ('ondeviceorientation' in window) {\n  // We can still listen for deviceorientation events.\n  // The `absolute` property of the event tells us whether\n  // or not the degrees are absolute.\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(200); \n  }\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  localCompass.setNumber(300); \n  /*\n  window.addEventListener('deviceorientation', function(event) {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      localCompass.setNumber(event.webkitCompassHeading);  \n       \n    }\n    localCompass.setNumber(event.alpha); \n  });\n} else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n}*/\n\n",
+                  "inlineCode": "/*\nruntimeScene.setBackgroundColor(200,70,50);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);     \n  } else {\n      var alpha = 360 - event.alpha;\n      if (alpha < 0) { alpha += 360; }\n      if (alpha > 360) { alpha -= 360; }\n      localCompass.setNumber(alpha); \n  }\n}\n  if (window.DeviceOrientationEvent){\n    if ('ondeviceorientationabsolute' in window) {\n      const obj = eventsFunctionContext.getObjects('Object');\n      var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n      window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n    } else {\n      window.addEventListener('deviceorientation', handleOrientation);\n    }\n  } else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n  }\n  */",
+                  "parameterObjects": "",
+                  "useStrict": true
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "GeoLocation::Compass",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Ensure the compass is activated for the desired platform",
+              "fullName": "Activate compass for platform",
+              "functionType": "Action",
+              "name": "ActivateCompass",
+              "sentence": "Active compass in _PARAM0_",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "runtimeScene.setBackgroundColor(100,100,240);\n\nif (typeof DeviceOrientationEvent.requestPermission === 'function') {\n  DeviceOrientationEvent.requestPermission()\n  .then(response => {\n    if (response == 'granted') {\n      window.addEventListener('deviceorientation', (e) => {\n        // do something with e\n      })\n    }\n  })\n  .catch(console.error)\n} else {\n  // non iOS 13+\n}\n",
                   "parameterObjects": "",
                   "useStrict": true
                 }
