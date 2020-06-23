@@ -34,7 +34,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.cond
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.condition1IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6cbfe0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6bf808 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const obj = eventsFunctionContext.getObjects('Object');
@@ -55,17 +55,17 @@ function failedUpdate(error) {
 
 navigator.geolocation.getCurrentPosition(updatePos, failedUpdate);
 };
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cbe7c = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6bf62c = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6cbfe0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6bf808(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
 
-}; //End of gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cbe7c
+}; //End of gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6bf62c
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x5b7598 = function(runtimeScene, eventsFunctionContext) {
 
 {
@@ -115,7 +115,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.GDOb
 }
 }
 { //Subevents
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cbe7c(runtimeScene, eventsFunctionContext);} //End of subevents
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6bf62c(runtimeScene, eventsFunctionContext);} //End of subevents
 }
 
 }
@@ -175,9 +175,9 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.conditionT
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.condition0IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c0ec8 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6d75a8 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
-runtimeScene.setBackgroundColor(220,50,50);
+runtimeScene.setBackgroundColor(100,200,200);
 
 function handleOrientation(event) {
   const obj = eventsFunctionContext.getObjects('Object');
@@ -190,12 +190,6 @@ function handleOrientation(event) {
       localCompass.setNumber(event.alpha); 
   }
 }
-
-if (window.ondeviceorientationabsolute) {
-    const obj = eventsFunctionContext.getObjects('Object');
-    var localCompass = obj[0].getVariables().get("CompassHeading");
-    localCompass.setNumber(700); 
-} else {
   if (window.DeviceOrientationEvent){
       const obj = eventsFunctionContext.getObjects('Object');
       var localCompass = obj[0].getVariables().get("CompassHeading");
@@ -205,7 +199,6 @@ if (window.ondeviceorientationabsolute) {
     var localCompass = obj[0].getVariables().get("CompassHeading");
     localCompass.setNumber(400); 
   }
-}
 /*
 if (window.DeviceOrientationEvent) {
   // Listen for the deviceorientation event and handle the raw data
@@ -257,7 +250,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.eventsList
 {
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c0ec8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6d75a8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
