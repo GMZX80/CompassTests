@@ -284,8 +284,8 @@
           "locked": false,
           "name": "GPSOutput",
           "width": 0,
-          "x": 164,
-          "y": 1062,
+          "x": -2,
+          "y": 1071,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -349,7 +349,7 @@
           "animations": []
         },
         {
-          "bold": true,
+          "bold": false,
           "italic": false,
           "name": "GPSOutput",
           "smoothed": true,
@@ -367,7 +367,7 @@
           ],
           "string": "Lattitude and Longitude readout",
           "font": "Roman SD.ttf",
-          "characterSize": 30,
+          "characterSize": 20,
           "color": {
             "b": 0,
             "g": 0,
@@ -641,7 +641,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "runtimeScene.setBackgroundColor(100,200,200);\n\n    \nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  window.addEventListener('deviceorientation', function(event) {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      localCompass.setNumber(event.webkitCompassHeading);  \n       \n    }\n    localCompass.setNumber(event.alpha); \n  });\n} else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n}",
+                  "inlineCode": "runtimeScene.setBackgroundColor(100,100,200);\n\n    \nif (window.DeviceOrientationEvent) {\n  // Listen for the deviceorientation event and handle the raw data\n  // check for Android or ios version (ios uses webkitcompassheading)\n  if ('ondeviceorientationabsolute' in window) {\n  const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(100); \n  } else if ('ondeviceorientation' in window) {\n  // We can still listen for deviceorientation events.\n  // The `absolute` property of the event tells us whether\n  // or not the degrees are absolute.\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(200); \n  }\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  localCompass.setNumber(300); \n  /*\n  window.addEventListener('deviceorientation', function(event) {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n    if(event.webkitCompassHeading) {\n      // Apple works only with this, alpha doesn't work\n      localCompass.setNumber(event.webkitCompassHeading);  \n       \n    }\n    localCompass.setNumber(event.alpha); \n  });*/\n} else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n}\n\n",
                   "parameterObjects": "",
                   "useStrict": true
                 }
