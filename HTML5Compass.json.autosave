@@ -720,7 +720,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "runtimeScene.setBackgroundColor(200,170,240);\n\nif (typeof DeviceOrientationEvent.requestPermission === 'function') {\n  DeviceOrientationEvent.requestPermission()\n  .then(response => {\n    if (response == 'granted') {\n      window.addEventListener('deviceorientation', (e) => {\n        // do something with e\n      })\n    }\n  })\n  .catch(console.error)\n} else {\n  // non iOS 13+\n}\n",
+                  "inlineCode": "runtimeScene.setBackgroundColor(200,170,240);\n\nif (typeof DeviceOrientationEvent.requestPermission === 'function') {\n  runtimeScene.setBackgroundColor(30,170,240);\n  DeviceOrientationEvent.requestPermission()\n  .then(response => {\n    if (response == 'granted') {\n      window.addEventListener('deviceorientation', (e) => {\n        // do something with e\n      })\n    }\n  })\n  .catch(console.error)\n} else {\n  // non iOS 13+\n}\n",
                   "parameterObjects": "",
                   "useStrict": true
                 }
