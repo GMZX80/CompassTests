@@ -34,7 +34,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.cond
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.condition1IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6b8eb0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6b9048 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 const obj = eventsFunctionContext.getObjects('Object');
@@ -55,17 +55,17 @@ function failedUpdate(error) {
 
 navigator.geolocation.getCurrentPosition(updatePos, failedUpdate);
 };
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cc14c = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6b8ee4 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6b8eb0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.userFunc0x6b9048(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
 
-}; //End of gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cc14c
+}; //End of gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6b8ee4
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x5b7598 = function(runtimeScene, eventsFunctionContext) {
 
 {
@@ -115,7 +115,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.GDOb
 }
 }
 { //Subevents
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cc14c(runtimeScene, eventsFunctionContext);} //End of subevents
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6b8ee4(runtimeScene, eventsFunctionContext);} //End of subevents
 }
 
 }
@@ -175,15 +175,37 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.conditionT
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.condition0IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6b9548 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c77b0 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 runtimeScene.setBackgroundColor(220,200,200);
 
+function orientationListener(event) {
+
+}
     
+// Check if device can provide absolute orientation data
+if (window.DeviceOrientationAbsoluteEvent) {
+    const obj = eventsFunctionContext.getObjects('Object');
+    var localCompass = obj[0].getVariables().get("CompassHeading");
+    localCompass.setNumber(100); 
+    window.addEventListener("DeviceOrientationAbsoluteEvent", orientationListener);
+} // If not, check if the device sends any orientation dat
+else if(window.DeviceOrientationEvent){
+    const obj = eventsFunctionContext.getObjects('Object');
+    var localCompass = obj[0].getVariables().get("CompassHeading");
+    localCompass.setNumber(200); 
+    window.addEventListener("deviceorientation", orientationListener);
+} // Send an alert if the device isn't compatible
+else {
+    const obj = eventsFunctionContext.getObjects('Object');
+    var localCompass = obj[0].getVariables().get("CompassHeading");
+    localCompass.setNumber(300); 
+}
+/*
 if (window.DeviceOrientationEvent) {
   // Listen for the deviceorientation event and handle the raw data
   // check for Android or ios version (ios uses webkitcompassheading)
-  if (window.DeviceOrientationAbsoluteEvent) {
+  if (window.OnDeviceOrientationAbsolute) {
     const obj = eventsFunctionContext.getObjects('Object');
     var localCompass = obj[0].getVariables().get("CompassHeading");
     localCompass.setNumber(100); 
@@ -209,12 +231,12 @@ if (window.DeviceOrientationEvent) {
        
     }
     localCompass.setNumber(event.alpha); 
-  });*/
+  });
 } else {
     const obj = eventsFunctionContext.getObjects('Object');
     var localCompass = obj[0].getVariables().get("CompassHeading");
     localCompass.setNumber(400); 
-}
+}*/
 
 
 };
@@ -230,7 +252,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.eventsList
 {
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6b9548(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c77b0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
