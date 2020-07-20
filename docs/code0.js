@@ -8,42 +8,13 @@ gdjs.NewSceneCode.GDGPSOutputObjects2= [];
 
 gdjs.NewSceneCode.conditionTrue_0 = {val:false};
 gdjs.NewSceneCode.condition0IsTrue_0 = {val:false};
-gdjs.NewSceneCode.condition1IsTrue_0 = {val:false};
 
 
-gdjs.NewSceneCode.eventsList0x5b7338 = function(runtimeScene) {
-
-{
-
-
-
-}
-
+gdjs.NewSceneCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 {
 
 
-gdjs.NewSceneCode.condition0IsTrue_0.val = false;
-{
-gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.NewSceneCode.condition0IsTrue_0.val) {
-}
-
-}
-
-
-{
-
-
-gdjs.NewSceneCode.condition0IsTrue_0.val = false;
-{
-gdjs.NewSceneCode.condition0IsTrue_0.val = gdjs.evtTools.input.popStartedTouch(runtimeScene);
-}if (gdjs.NewSceneCode.condition0IsTrue_0.val) {
-gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOutput"));
-{for(var i = 0, len = gdjs.NewSceneCode.GDGPSOutputObjects1.length ;i < len;++i) {
-    gdjs.NewSceneCode.GDGPSOutputObjects1[i].getBehavior("Compass").ActivateCompass((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}
-}}
 
 }
 
@@ -61,7 +32,7 @@ gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOut
 }
 
 
-}; //End of gdjs.NewSceneCode.eventsList0x5b7338
+}; //End of gdjs.NewSceneCode.eventsList0x5b7a18
 
 
 gdjs.NewSceneCode.func = function(runtimeScene) {
@@ -74,7 +45,7 @@ gdjs.NewSceneCode.GDPlayerObjects2.length = 0;
 gdjs.NewSceneCode.GDGPSOutputObjects1.length = 0;
 gdjs.NewSceneCode.GDGPSOutputObjects2.length = 0;
 
-gdjs.NewSceneCode.eventsList0x5b7338(runtimeScene);
+gdjs.NewSceneCode.eventsList0x5b7a18(runtimeScene);
 return;
 
 }
