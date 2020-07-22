@@ -290,6 +290,21 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Abs",
+          "width": 0,
+          "x": 20,
+          "y": 1164,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -373,6 +388,25 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Abs",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "WAITING",
+          "font": "",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -406,6 +440,18 @@
                 "GPSOutput",
                 "=",
                 "GPSOutput.VariableString(CompassHeading)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Abs",
+                "=",
+                "GPSOutput.VariableString(CompassMessage)"
               ],
               "subInstructions": []
             }
@@ -635,7 +681,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "\nruntimeScene.setBackgroundColor(10,170,150);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);     \n  } else {\n      var alpha = 360 - event.alpha;\n      if (alpha < 0) { alpha += 360; }\n      if (alpha > 360) { alpha -= 360; }\n      localCompass.setNumber(alpha); \n  }\n}\n  if (window.DeviceOrientationEvent){\n    if ('ondeviceorientationabsolute' in window) {\n      const obj = eventsFunctionContext.getObjects('Object');\n      var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n      window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n    } else {\n      window.addEventListener('deviceorientation', handleOrientation);\n    }\n  } else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n  }\n  ",
+                  "inlineCode": "\nruntimeScene.setBackgroundColor(10,190,100);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  \n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);     \n  } else {\n      var alpha = 360 - event.alpha;\n      if (alpha < 0) { alpha += 360; }\n      if (alpha > 360) { alpha -= 360; }\n      localCompass.setNumber(alpha); \n  }\n}\n  if (window.DeviceOrientationEvent){\n    if ('ondeviceorientationabsolute' in window) {\n      const obj = eventsFunctionContext.getObjects('Object');\n      var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n      var localMessage = obj[0].getVariables().get(\"CompassMessage\");\n      localMessage.setString(\"Absolute\");\n      \n      window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n    } else {\n      var localMessage = obj[0].getVariables().get(\"Not Absolute\");\n      localMessage.setString(\"Absolute\");\n      window.addEventListener('deviceorientation', handleOrientation);\n    }\n  } else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n  }\n  ",
                   "parameterObjects": "",
                   "useStrict": true
                 }
@@ -710,6 +756,24 @@
               "extraInformation": [],
               "hidden": false,
               "name": "CompassHeading"
+            },
+            {
+              "value": "",
+              "type": "String",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "CompassMessage"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "Property"
             }
           ]
         }

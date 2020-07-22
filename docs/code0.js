@@ -5,6 +5,8 @@ gdjs.NewSceneCode.GDPlayerObjects1= [];
 gdjs.NewSceneCode.GDPlayerObjects2= [];
 gdjs.NewSceneCode.GDGPSOutputObjects1= [];
 gdjs.NewSceneCode.GDGPSOutputObjects2= [];
+gdjs.NewSceneCode.GDAbsObjects1= [];
+gdjs.NewSceneCode.GDAbsObjects2= [];
 
 gdjs.NewSceneCode.conditionTrue_0 = {val:false};
 gdjs.NewSceneCode.condition0IsTrue_0 = {val:false};
@@ -23,9 +25,13 @@ gdjs.NewSceneCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 
 {
+gdjs.NewSceneCode.GDAbsObjects1.createFrom(runtimeScene.getObjects("Abs"));
 gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOutput"));
 {for(var i = 0, len = gdjs.NewSceneCode.GDGPSOutputObjects1.length ;i < len;++i) {
     gdjs.NewSceneCode.GDGPSOutputObjects1[i].setString((gdjs.RuntimeObject.getVariableString(gdjs.NewSceneCode.GDGPSOutputObjects1[i].getVariables().get("CompassHeading"))));
+}
+}{for(var i = 0, len = gdjs.NewSceneCode.GDAbsObjects1.length ;i < len;++i) {
+    gdjs.NewSceneCode.GDAbsObjects1[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.NewSceneCode.GDGPSOutputObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.NewSceneCode.GDGPSOutputObjects1[0].getVariables()).get("CompassMessage"))));
 }
 }}
 
@@ -58,6 +64,8 @@ gdjs.NewSceneCode.GDPlayerObjects1.length = 0;
 gdjs.NewSceneCode.GDPlayerObjects2.length = 0;
 gdjs.NewSceneCode.GDGPSOutputObjects1.length = 0;
 gdjs.NewSceneCode.GDGPSOutputObjects2.length = 0;
+gdjs.NewSceneCode.GDAbsObjects1.length = 0;
+gdjs.NewSceneCode.GDAbsObjects2.length = 0;
 
 gdjs.NewSceneCode.eventsList0x5b7a18(runtimeScene);
 return;
