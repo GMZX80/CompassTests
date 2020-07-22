@@ -37,7 +37,7 @@ gdjs.NewSceneCode.GDNakedObjects1.createFrom(runtimeScene.getObjects("Naked"));
     gdjs.NewSceneCode.GDAbsObjects1[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.NewSceneCode.GDGPSOutputObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.NewSceneCode.GDGPSOutputObjects1[0].getVariables()).get("CompassMessage"))));
 }
 }{for(var i = 0, len = gdjs.NewSceneCode.GDNakedObjects1.length ;i < len;++i) {
-    gdjs.NewSceneCode.GDNakedObjects1[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.NewSceneCode.GDGPSOutputObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.NewSceneCode.GDGPSOutputObjects1[0].getVariables()).get("NakedCompassMessage"))));
+    gdjs.NewSceneCode.GDNakedObjects1[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.NewSceneCode.GDGPSOutputObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.NewSceneCode.GDGPSOutputObjects1[0].getVariables()).get("NakedCompassHeading"))));
 }
 }}
 

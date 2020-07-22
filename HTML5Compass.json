@@ -497,7 +497,7 @@
               "parameters": [
                 "Naked",
                 "=",
-                "GPSOutput.VariableString(NakedCompassMessage)"
+                "GPSOutput.VariableString(NakedCompassHeading)"
               ],
               "subInstructions": []
             }
