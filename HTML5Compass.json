@@ -367,7 +367,7 @@
           ],
           "string": "Lattitude and Longitude readout",
           "font": "Roman SD.ttf",
-          "characterSize": 20,
+          "characterSize": 30,
           "color": {
             "b": 0,
             "g": 0,
