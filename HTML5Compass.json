@@ -405,7 +405,7 @@
               "parameters": [
                 "GPSOutput",
                 "=",
-                "GPSOutput.VariableString(GPSMessage) + \": \" + GPSOutput.VariableString(Latitude) + \", \" + GPSOutput.VariableString(Longitude) + \" \" + GPSOutput.VariableString(CompassHeading)"
+                "GPSOutput.VariableString(CompassHeading)"
               ],
               "subInstructions": []
             }

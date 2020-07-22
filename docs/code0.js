@@ -25,7 +25,7 @@ gdjs.NewSceneCode.eventsList0x5b7a18 = function(runtimeScene) {
 {
 gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOutput"));
 {for(var i = 0, len = gdjs.NewSceneCode.GDGPSOutputObjects1.length ;i < len;++i) {
-    gdjs.NewSceneCode.GDGPSOutputObjects1[i].setString((gdjs.RuntimeObject.getVariableString(gdjs.NewSceneCode.GDGPSOutputObjects1[i].getVariables().get("GPSMessage"))) + ": " + (gdjs.RuntimeObject.getVariableString(gdjs.NewSceneCode.GDGPSOutputObjects1[i].getVariables().get("Latitude"))) + ", " + (gdjs.RuntimeObject.getVariableString(gdjs.NewSceneCode.GDGPSOutputObjects1[i].getVariables().get("Longitude"))) + " " + (gdjs.RuntimeObject.getVariableString(gdjs.NewSceneCode.GDGPSOutputObjects1[i].getVariables().get("CompassHeading"))));
+    gdjs.NewSceneCode.GDGPSOutputObjects1[i].setString((gdjs.RuntimeObject.getVariableString(gdjs.NewSceneCode.GDGPSOutputObjects1[i].getVariables().get("CompassHeading"))));
 }
 }}
 

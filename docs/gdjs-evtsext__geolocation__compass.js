@@ -55,7 +55,7 @@ function failedUpdate(error) {
 
 navigator.geolocation.getCurrentPosition(updatePos, failedUpdate);
 };
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cf1e4 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6d673c = function(runtimeScene, eventsFunctionContext) {
 
 {
 
@@ -65,7 +65,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.user
 }
 
 
-}; //End of gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cf1e4
+}; //End of gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6d673c
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x5b7c78 = function(runtimeScene, eventsFunctionContext) {
 
 {
@@ -115,7 +115,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.GDOb
 }
 }
 { //Subevents
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6cf1e4(runtimeScene, eventsFunctionContext);} //End of subevents
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x6d673c(runtimeScene, eventsFunctionContext);} //End of subevents
 }
 
 }
@@ -175,7 +175,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.conditionT
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.condition0IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c7218 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6b4930 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 
 runtimeScene.setBackgroundColor(10,170,150);
@@ -221,7 +221,7 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.eventsList
 {
 
 
-gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c7218(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6b4930(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
