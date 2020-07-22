@@ -367,7 +367,7 @@
           ],
           "string": "Lattitude and Longitude readout",
           "font": "Roman SD.ttf",
-          "characterSize": 20,
+          "characterSize": 50,
           "color": {
             "b": 0,
             "g": 0,
@@ -635,7 +635,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "\nruntimeScene.setBackgroundColor(100,70,50);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);     \n  } else {\n      var alpha = 360 - event.alpha;\n      if (alpha < 0) { alpha += 360; }\n      if (alpha > 360) { alpha -= 360; }\n      localCompass.setNumber(alpha); \n  }\n}\n  if (window.DeviceOrientationEvent){\n    if ('ondeviceorientationabsolute' in window) {\n      const obj = eventsFunctionContext.getObjects('Object');\n      var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n      window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n    } else {\n      window.addEventListener('deviceorientation', handleOrientation);\n    }\n  } else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n  }\n  ",
+                  "inlineCode": "\nruntimeScene.setBackgroundColor(10,170,150);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);     \n  } else {\n      var alpha = 360 - event.alpha;\n      if (alpha < 0) { alpha += 360; }\n      if (alpha > 360) { alpha -= 360; }\n      localCompass.setNumber(alpha); \n  }\n}\n  if (window.DeviceOrientationEvent){\n    if ('ondeviceorientationabsolute' in window) {\n      const obj = eventsFunctionContext.getObjects('Object');\n      var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n      window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n    } else {\n      window.addEventListener('deviceorientation', handleOrientation);\n    }\n  } else {\n    const obj = eventsFunctionContext.getObjects('Object');\n    var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n    localCompass.setNumber(400); \n  }\n  ",
                   "parameterObjects": "",
                   "useStrict": true
                 }
