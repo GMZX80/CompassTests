@@ -32,6 +32,20 @@ gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOut
 }
 
 
+{
+
+
+{
+gdjs.NewSceneCode.GDGPSOutputObjects1.createFrom(runtimeScene.getObjects("GPSOutput"));
+gdjs.NewSceneCode.GDRomanCompassObjects1.createFrom(runtimeScene.getObjects("RomanCompass"));
+{for(var i = 0, len = gdjs.NewSceneCode.GDRomanCompassObjects1.length ;i < len;++i) {
+    gdjs.NewSceneCode.GDRomanCompassObjects1[i].setAngle((gdjs.RuntimeObject.getVariableNumber(((gdjs.NewSceneCode.GDGPSOutputObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.NewSceneCode.GDGPSOutputObjects1[0].getVariables()).get("CompassHeading"))));
+}
+}}
+
+}
+
+
 }; //End of gdjs.NewSceneCode.eventsList0x5b7a18
 
 

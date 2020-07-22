@@ -395,47 +395,17 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PopStartedTouch"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "GeoLocation::Compass::ActivateCompass"
+                "value": "TextObject::String"
               },
               "parameters": [
                 "GPSOutput",
-                "Compass",
-                ""
+                "=",
+                "GPSOutput.VariableString(GPSMessage) + \": \" + GPSOutput.VariableString(Latitude) + \", \" + GPSOutput.VariableString(Longitude) + \" \" + GPSOutput.VariableString(CompassHeading)"
               ],
               "subInstructions": []
             }
@@ -451,12 +421,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "TextObject::String"
+                "value": "SetAngle"
               },
               "parameters": [
-                "GPSOutput",
+                "RomanCompass",
                 "=",
-                "GPSOutput.VariableString(GPSMessage) + \": \" + GPSOutput.VariableString(Latitude) + \", \" + GPSOutput.VariableString(Longitude) + \" \" + GPSOutput.VariableString(CompassHeading)"
+                "GPSOutput.Variable(CompassHeading)"
               ],
               "subInstructions": []
             }
