@@ -233,18 +233,18 @@
   "variables": [],
   "layouts": [
     {
-      "b": 209,
+      "b": 0,
       "disableInputWhenNotFocused": true,
       "mangledName": "NewScene",
       "name": "NewScene",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
-      "r": 209,
+      "r": 0,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 209,
+      "v": 0,
       "uiSettings": {
         "grid": false,
         "gridB": 255,
@@ -269,8 +269,8 @@
           "locked": false,
           "name": "RomanCompass",
           "width": 1590,
-          "x": -263,
-          "y": -143,
+          "x": -217,
+          "y": -123,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -399,9 +399,9 @@
           "font": "Roman SD.ttf",
           "characterSize": 50,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 28,
+            "g": 231,
+            "r": 248
           }
         },
         {
@@ -418,9 +418,9 @@
           "font": "",
           "characterSize": 40,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 28,
+            "g": 231,
+            "r": 248
           }
         },
         {
@@ -437,9 +437,9 @@
           "font": "",
           "characterSize": 60,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 28,
+            "g": 231,
+            "r": 248
           }
         }
       ],
@@ -727,7 +727,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "\nruntimeScene.setBackgroundColor(100,200,200);\n\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  var localNaked = obj[0].getVariables().get(\"NakedCompassHeading\");\n  \n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);\n    localNaked.setNumber(event.webkitCompassHeading);     \n  } else {\n      localCompass.setNumber(event.alpha);\n      localNaked.setNumber(event.alpha);\n  }\n}\n  \nif (window.DeviceOrientationEvent){\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localMessage = obj[0].getVariables().get(\"CompassMessage\");\n  if ('ondeviceorientationabsolute' in window) {\n    localMessage.setString(\"Absolute\");\n    window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n  } else {\n    localMessage.setString(\"Not Absolute\");\n    // comment out for now as stops ios from working at all\n    //window.addEventListener('deviceorientation', handleOrientation);\n  }\n} else {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  localCompass.setNumber(400); \n}\n  ",
+                  "inlineCode": "\nfunction handleOrientation(event) {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  var localNaked = obj[0].getVariables().get(\"NakedCompassHeading\");\n  \n\n  if(event.webkitCompassHeading) {\n    // Apple works only with this, alpha doesn't work\n    localCompass.setNumber(event.webkitCompassHeading);\n    localNaked.setNumber(event.webkitCompassHeading);     \n  } else {\n      localCompass.setNumber(event.alpha);\n      localNaked.setNumber(event.alpha);\n  }\n}\n  \nif (window.DeviceOrientationEvent){\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localMessage = obj[0].getVariables().get(\"CompassMessage\");\n  if ('ondeviceorientationabsolute' in window) {\n    localMessage.setString(\"Absolute\");\n    window.addEventListener('deviceorientationabsolute', handleOrientation, true);\n  } else {\n    localMessage.setString(\"Not Absolute\");\n    // comment out for now as stops ios from working at all\n    //window.addEventListener('deviceorientation', handleOrientation);\n  }\n} else {\n  const obj = eventsFunctionContext.getObjects('Object');\n  var localCompass = obj[0].getVariables().get(\"CompassHeading\");\n  localCompass.setNumber(400); \n}\n  ",
                   "parameterObjects": "",
                   "useStrict": true
                 }
