@@ -93,9 +93,21 @@
 				DeviceOrientationEvent.requestPermission()
 				.then(response => {
 					  if (response == 'granted') {
-							window.addEventListener('deviceorientation', (e) => {
-								  // do something with e
-							})
+						(function() {
+        					//Initialization
+       						 var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+
+        					//Create a renderer
+        					game.getRenderer().createStandardCanvas(document.body);
+
+        					//Bind keyboards/mouse/touch events
+        					game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        					//Load all assets and start the game
+        					game.loadAllAssets(function() {
+           						game.startGameLoop();
+        					});
+    					})();
 					  }
 				})
 				.catch(console.error)
@@ -110,21 +122,7 @@
     
 	<script>
 
-    (function() {
-        //Initialization
-        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
 
-        //Create a renderer
-        game.getRenderer().createStandardCanvas(document.body);
-
-        //Bind keyboards/mouse/touch events
-        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
-
-        //Load all assets and start the game
-        game.loadAllAssets(function() {
-            game.startGameLoop();
-        });
-    })();
 
 	</script>
 </body>
