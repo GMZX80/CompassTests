@@ -53,10 +53,14 @@ function updatePos(position) {
 }
 
 function failedUpdate(error) {
-    localMessage.setString("No GPS Signal");
+    localMessage.setString("Unable to retrieve GPS position");
 }
 
-navigator.geolocation.getCurrentPosition(updatePos, failedUpdate);
+if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(updatePos, failedUpdate);
+} else {
+    localMessage.setString("Geolocation is not supported");
+}
 };
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.eventsList0x70bf14 = function(runtimeScene, eventsFunctionContext) {
 
