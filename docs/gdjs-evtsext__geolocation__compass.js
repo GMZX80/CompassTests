@@ -187,7 +187,7 @@ function handleOrientation(event) {
   var localNaked = obj[0].getVariables().get("NakedCompassHeading");
   
 
-  if(event.webkitCompassHeading) {
+  if (event.webkitCompassHeading !== undefined) {
     // Apple works only with this, alpha doesn't work
     localCompass.setNumber(event.webkitCompassHeading);
     localNaked.setNumber(event.webkitCompassHeading);     
