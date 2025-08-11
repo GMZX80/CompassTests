@@ -22,6 +22,12 @@ gdjs.evtsExt__GeoLocation__Compass.Compass = function(runtimeScene, behaviorData
     this._behaviorData.CompassMessage = behaviorData.CompassMessage !== undefined ? behaviorData.CompassMessage : "";
     this._behaviorData.NakedCompassHeading = behaviorData.NakedCompassHeading !== undefined ? behaviorData.NakedCompassHeading : Number("") || 0;
     this._behaviorData.Property = behaviorData.Property !== undefined ? behaviorData.Property : Number("") || 0;
+
+    // References to the orientation event listener so it can be removed
+    // when the behavior is destroyed.
+    this._orientationHandler = null;
+    this._orientationEventName = null;
+    this._orientationListenerAdded = false;
 };
 
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype = Object.create( gdjs.RuntimeBehavior.prototype );
@@ -181,37 +187,45 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.condition0
 gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x6c0938 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 
-function handleOrientation(event) {
-  const obj = eventsFunctionContext.getObjects('Object');
-  var localCompass = obj[0].getVariables().get("CompassHeading");
-  var localNaked = obj[0].getVariables().get("NakedCompassHeading");
-  
+const obj = eventsFunctionContext.getObjects('Object');
+// Retrieve the behavior instance to store the handler reference.
+var behavior = obj[0].getBehavior(eventsFunctionContext.getBehaviorName('Behavior'));
+
+// Avoid registering multiple listeners.
+if (behavior._orientationListenerAdded) {
+  return;
+}
+
+behavior._orientationHandler = function(event) {
+  var localCompass = behavior.owner.getVariables().get("CompassHeading");
+  var localNaked = behavior.owner.getVariables().get("NakedCompassHeading");
 
   if(event.webkitCompassHeading) {
     // Apple works only with this, alpha doesn't work
     localCompass.setNumber(event.webkitCompassHeading);
-    localNaked.setNumber(event.webkitCompassHeading);     
+    localNaked.setNumber(event.webkitCompassHeading);
   } else {
-      localCompass.setNumber(event.alpha);
-      localNaked.setNumber(event.alpha);
+    localCompass.setNumber(event.alpha);
+    localNaked.setNumber(event.alpha);
   }
-}
-  
+};
+
 if (window.DeviceOrientationEvent){
-  const obj = eventsFunctionContext.getObjects('Object');
-  var localMessage = obj[0].getVariables().get("CompassMessage");
+  var localMessage = behavior.owner.getVariables().get("CompassMessage");
   if ('ondeviceorientationabsolute' in window) {
     localMessage.setString("Absolute");
-    window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+    behavior._orientationEventName = 'deviceorientationabsolute';
+    window.addEventListener(behavior._orientationEventName, behavior._orientationHandler, true);
   } else {
     localMessage.setString("Not Absolute");
+    behavior._orientationEventName = 'deviceorientation';
     // comment out for now as stops ios from working at all
-    window.addEventListener('deviceorientation', handleOrientation);
+    window.addEventListener(behavior._orientationEventName, behavior._orientationHandler);
   }
+  behavior._orientationListenerAdded = true;
 } else {
-  const obj = eventsFunctionContext.getObjects('Object');
-  var localCompass = obj[0].getVariables().get("CompassHeading");
-  localCompass.setNumber(400); 
+  var localCompass = behavior.owner.getVariables().get("CompassHeading");
+  localCompass.setNumber(400);
 }
   
 };
@@ -279,6 +293,15 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.eventsList
 return;
 }
 
+
+gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onDestroy = function() {
+  if (this._orientationListenerAdded && this._orientationEventName && this._orientationHandler) {
+    window.removeEventListener(this._orientationEventName, this._orientationHandler);
+    this._orientationListenerAdded = false;
+    this._orientationEventName = null;
+    this._orientationHandler = null;
+  }
+};
 
 // Methods:
 
