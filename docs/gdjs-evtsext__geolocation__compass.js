@@ -41,6 +41,9 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.doStepPreEventsContext.user
 "use strict";
 
 const obj = eventsFunctionContext.getObjects('Object');
+if (!obj.length) {
+    return;
+}
 var localLat = obj[0].getVariables().get("Latitude");
 var localLong = obj[0].getVariables().get("Longitude");
 var localMessage = obj[0].getVariables().get("GPSMessage");
@@ -183,6 +186,9 @@ gdjs.evtsExt__GeoLocation__Compass.Compass.prototype.onCreatedContext.userFunc0x
 
 function handleOrientation(event) {
   const obj = eventsFunctionContext.getObjects('Object');
+  if (!obj.length) {
+    return;
+  }
   var localCompass = obj[0].getVariables().get("CompassHeading");
   var localNaked = obj[0].getVariables().get("NakedCompassHeading");
   
@@ -199,6 +205,9 @@ function handleOrientation(event) {
   
 if (window.DeviceOrientationEvent){
   const obj = eventsFunctionContext.getObjects('Object');
+  if (!obj.length) {
+    return;
+  }
   var localMessage = obj[0].getVariables().get("CompassMessage");
   if ('ondeviceorientationabsolute' in window) {
     localMessage.setString("Absolute");
@@ -210,8 +219,11 @@ if (window.DeviceOrientationEvent){
   }
 } else {
   const obj = eventsFunctionContext.getObjects('Object');
+  if (!obj.length) {
+    return;
+  }
   var localCompass = obj[0].getVariables().get("CompassHeading");
-  localCompass.setNumber(400); 
+  localCompass.setNumber(400);
 }
   
 };
