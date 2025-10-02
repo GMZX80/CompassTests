@@ -1,840 +1,1154 @@
-{
-  "firstLayout": "",
-  "gdVersion": {
-    "build": 98,
-    "major": 4,
-    "minor": 0,
-    "revision": 0
-  },
-  "properties": {
-    "adMobAppId": "",
-    "adaptGameResolutionAtRuntime": false,
-    "folderProject": false,
-    "linuxExecutableFilename": "",
-    "macExecutableFilename": "",
-    "orientation": "portrait",
-    "packageName": "com.zx80M.roman",
-    "projectFile": "C:\\Users\\emvig\\Desktop\\CompassTests\\HTML5Compass.json",
-    "scaleMode": "linear",
-    "sizeOnStartupMode": "",
-    "useExternalSourceFiles": false,
-    "version": "1.0.0",
-    "winExecutableFilename": "",
-    "winExecutableIconFile": "",
-    "name": "Project",
-    "author": "Graham",
-    "windowWidth": 1200,
-    "windowHeight": 2000,
-    "latestCompilationDirectory": "/home/matthias/Programme/GD_MyFork/testprojects/compass",
-    "maxFPS": 60,
-    "minFPS": 10,
-    "verticalSync": false,
-    "platformSpecificAssets": {},
-    "loadingScreen": {
-      "showGDevelopSplash": true
-    },
-    "extensions": [
-      {
-        "name": "BuiltinObject"
-      },
-      {
-        "name": "BuiltinAudio"
-      },
-      {
-        "name": "BuiltinVariables"
-      },
-      {
-        "name": "BuiltinTime"
-      },
-      {
-        "name": "BuiltinMouse"
-      },
-      {
-        "name": "BuiltinKeyboard"
-      },
-      {
-        "name": "BuiltinJoystick"
-      },
-      {
-        "name": "BuiltinCamera"
-      },
-      {
-        "name": "BuiltinWindow"
-      },
-      {
-        "name": "BuiltinFile"
-      },
-      {
-        "name": "BuiltinNetwork"
-      },
-      {
-        "name": "BuiltinScene"
-      },
-      {
-        "name": "BuiltinAdvanced"
-      },
-      {
-        "name": "Sprite"
-      },
-      {
-        "name": "BuiltinCommonInstructions"
-      },
-      {
-        "name": "BuiltinCommonConversions"
-      },
-      {
-        "name": "BuiltinStringInstructions"
-      },
-      {
-        "name": "BuiltinMathematicalTools"
-      },
-      {
-        "name": "BuiltinExternalLayouts"
-      }
-    ],
-    "platforms": [
-      {
-        "name": "GDevelop JS platform"
-      }
-    ],
-    "currentPlatform": "GDevelop JS platform"
-  },
-  "resources": {
-    "resources": [
-      {
-        "alwaysLoaded": false,
-        "file": "img/compass.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "compass.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/needle.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "needle.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "compass-rose-mosaic-medallion.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "compass-rose-mosaic-medallion.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Spear.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Spear.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Needle.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Needle.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/compass-rose-mosaic-medallion.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "img\\compass-rose-mosaic-medallion.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/Needle.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "img\\Needle.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/COmpas.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "img\\COmpas.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/compass-needle-png-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "img\\compass-needle-png-1.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/NeedleU.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "img\\NeedleU.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "img/okneedle.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "img\\okneedle.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "compass.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "compass.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "CompasStar.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "CompasStar.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "Roman SD.ttf",
-        "kind": "font",
-        "metadata": "",
-        "name": "Roman SD.ttf",
-        "userAdded": false
-      }
-    ],
-    "resourceFolders": []
-  },
-  "objects": [],
-  "objectsGroups": [],
-  "variables": [],
-  "layouts": [
-    {
-      "b": 0,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "NewScene",
-      "name": "NewScene",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 0,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 0,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.28
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 1658,
-          "layer": "",
-          "locked": false,
-          "name": "RomanCompass",
-          "width": 1942,
-          "x": -391,
-          "y": -206,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "GPSOutput",
-          "width": 0,
-          "x": 29,
-          "y": 1448,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Abs",
-          "width": 0,
-          "x": 34,
-          "y": 1187,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Naked",
-          "width": 0,
-          "x": 7,
-          "y": 1579,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "name": "RomanCompass",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "CompasStar.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Player",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "Compass",
-              "type": "GeoLocation::Compass",
-              "Lattitude": 0,
-              "Longitude": 0
-            }
-          ],
-          "animations": []
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "GPSOutput",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "Compass",
-              "type": "GeoLocation::Compass",
-              "Lattitude": 0,
-              "Longitude": 0
-            }
-          ],
-          "string": "Lattitude and Longitude readout",
-          "font": "Roman SD.ttf",
-          "characterSize": 50,
-          "color": {
-            "b": 28,
-            "g": 231,
-            "r": 248
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "Abs",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "WAITING",
-          "font": "",
-          "characterSize": 40,
-          "color": {
-            "b": 28,
-            "g": 231,
-            "r": 248
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "Naked",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Waiting",
-          "font": "",
-          "characterSize": 60,
-          "color": {
-            "b": 28,
-            "g": 231,
-            "r": 248
-          }
-        }
-      ],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Decive orientation - compass example",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "GPSOutput",
-                "=",
-                "GPSOutput.VariableString(CompassHeading)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "Abs",
-                "=",
-                "GPSOutput.VariableString(CompassMessage)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "Naked",
-                "=",
-                "GPSOutput.VariableString(NakedCompassHeading)"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "RomanCompass",
-                "=",
-                "GPSOutput.Variable(CompassHeading)"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        }
-      ],
-      "layers": [
-        {
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "Compass",
-          "type": "GeoLocation::Compass"
-        }
-      ]
-    }
-  ],
-  "externalEvents": [],
-  "eventsFunctionsExtensions": [
-    {
-      "author": "",
-      "description": "",
-      "extensionNamespace": "",
-      "fullName": "",
-      "name": "GeoLocation",
-      "shortDescription": "",
-      "tags": "",
-      "version": "",
-      "eventsFunctions": [],
-      "eventsBasedBehaviors": [
-        {
-          "description": "",
-          "fullName": "",
-          "name": "Compass",
-          "objectType": "",
-          "eventsFunctions": [
-            {
-              "description": "",
-              "fullName": "",
-              "functionType": "Action",
-              "name": "doStepPreEvents",
-              "sentence": "",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+﻿{
+    "firstLayout":  "SplashScene",
+    "gdVersion":  {
+                      "build":  98,
+                      "major":  4,
+                      "minor":  0,
+                      "revision":  0
                   },
-                  "comment": "Updating the timer to count in milliseconds so updates for GPS are called once every second (1000 milliseconds). UpdateTimer is the timer variable and is found in behaviour properties",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Object",
-                        "UpdateTimer",
-                        "+",
-                        "1000*TimeDelta()"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
+    "properties":  {
+                       "adMobAppId":  "",
+                       "adaptGameResolutionAtRuntime":  false,
+                       "folderProject":  false,
+                       "linuxExecutableFilename":  "",
+                       "macExecutableFilename":  "",
+                       "orientation":  "portrait",
+                       "packageName":  "com.zx80M.roman",
+                       "projectFile":  "C:\\Users\\emvig\\Desktop\\CompassTests\\HTML5Compass.json",
+                       "scaleMode":  "linear",
+                       "sizeOnStartupMode":  "",
+                       "useExternalSourceFiles":  false,
+                       "version":  "1.0.0",
+                       "winExecutableFilename":  "",
+                       "winExecutableIconFile":  "",
+                       "name":  "Project",
+                       "author":  "Graham",
+                       "windowWidth":  1200,
+                       "windowHeight":  2000,
+                       "latestCompilationDirectory":  "/home/matthias/Programme/GD_MyFork/testprojects/compass",
+                       "maxFPS":  60,
+                       "minFPS":  10,
+                       "verticalSync":  false,
+                       "platformSpecificAssets":  {
+
+                                                  },
+                       "loadingScreen":  {
+                                             "showGDevelopSplash":  true
+                                         },
+                       "extensions":  [
+                                          {
+                                              "name":  "BuiltinObject"
+                                          },
+                                          {
+                                              "name":  "BuiltinAudio"
+                                          },
+                                          {
+                                              "name":  "BuiltinVariables"
+                                          },
+                                          {
+                                              "name":  "BuiltinTime"
+                                          },
+                                          {
+                                              "name":  "BuiltinMouse"
+                                          },
+                                          {
+                                              "name":  "BuiltinKeyboard"
+                                          },
+                                          {
+                                              "name":  "BuiltinJoystick"
+                                          },
+                                          {
+                                              "name":  "BuiltinCamera"
+                                          },
+                                          {
+                                              "name":  "BuiltinWindow"
+                                          },
+                                          {
+                                              "name":  "BuiltinFile"
+                                          },
+                                          {
+                                              "name":  "BuiltinNetwork"
+                                          },
+                                          {
+                                              "name":  "BuiltinScene"
+                                          },
+                                          {
+                                              "name":  "BuiltinAdvanced"
+                                          },
+                                          {
+                                              "name":  "Sprite"
+                                          },
+                                          {
+                                              "name":  "BuiltinCommonInstructions"
+                                          },
+                                          {
+                                              "name":  "BuiltinCommonConversions"
+                                          },
+                                          {
+                                              "name":  "BuiltinStringInstructions"
+                                          },
+                                          {
+                                              "name":  "BuiltinMathematicalTools"
+                                          },
+                                          {
+                                              "name":  "BuiltinExternalLayouts"
+                                          }
+                                      ],
+                       "platforms":  [
+                                         {
+                                             "name":  "GDevelop JS platform"
+                                         }
+                                     ],
+                       "currentPlatform":  "GDevelop JS platform"
+                   },
+    "resources":  {
+                      "resources":  [
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/compass.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "compass.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/needle.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "needle.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "compass-rose-mosaic-medallion.jpg",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "compass-rose-mosaic-medallion.jpg",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "Spear.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "Spear.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "Needle.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "Needle.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/compass-rose-mosaic-medallion.jpg",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "img\\compass-rose-mosaic-medallion.jpg",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/Needle.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "img\\Needle.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/COmpas.jpg",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "img\\COmpas.jpg",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/compass-needle-png-1.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "img\\compass-needle-png-1.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/NeedleU.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "img\\NeedleU.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "img/okneedle.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "img\\okneedle.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "compass.jpg",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "compass.jpg",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "alwaysLoaded":  false,
+                                            "file":  "CompasStar.png",
+                                            "kind":  "image",
+                                            "metadata":  "",
+                                            "name":  "CompasStar.png",
+                                            "smoothed":  true,
+                                            "userAdded":  false
+                                        },
+                                        {
+                                            "file":  "Roman SD.ttf",
+                                            "kind":  "font",
+                                            "metadata":  "",
+                                            "name":  "Roman SD.ttf",
+                                            "userAdded":  false
+                                        }
+                                    ],
+                      "resourceFolders":  [
+
+                                          ]
                   },
-                  "comment": "If timer expires call the GPS Lattitude and Longitude",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Object",
-                        "UpdateTimer",
-                        ">",
-                        "1000"
+    "objects":  [
+
+                ],
+    "objectsGroups":  [
+
                       ],
-                      "subInstructions": []
-                    }
+    "variables":  [
+
                   ],
-                  "actions": [
+    "layouts":  [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Object",
-                        "UpdateTimer",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": [
+                        "b":  0,
+                        "disableInputWhenNotFocused":  true,
+                        "mangledName":  "SplashScene",
+                        "name":  "SplashScene",
+                        "oglFOV":  90,
+                        "oglZFar":  500,
+                        "oglZNear":  1,
+                        "r":  0,
+                        "standardSortMethod":  true,
+                        "stopSoundsOnStartup":  true,
+                        "title":  "",
+                        "v":  0,
+                        "uiSettings":  {
+                                           "grid":  false,
+                                           "gridB":  255,
+                                           "gridG":  180,
+                                           "gridHeight":  32,
+                                           "gridOffsetX":  0,
+                                           "gridOffsetY":  0,
+                                           "gridR":  158,
+                                           "gridWidth":  32,
+                                           "snap":  true,
+                                           "windowMask":  false,
+                                           "zoomFactor":  0.28
+                                       },
+                        "objectsGroups":  [
+
+                                          ],
+                        "variables":  [
+
+                                      ],
+                        "instances":  [
+                                          {
+                                              "angle":  0,
+                                              "customSize":  true,
+                                              "height":  2000,
+                                              "layer":  "",
+                                              "locked":  false,
+                                              "name":  "SplashImage",
+                                              "width":  1200,
+                                              "x":  0,
+                                              "y":  0,
+                                              "zOrder":  0,
+                                              "numberProperties":  [
+
+                                                                   ],
+                                              "stringProperties":  [
+
+                                                                   ],
+                                              "initialVariables":  [
+
+                                                                   ]
+                                          },
+                                          {
+                                              "angle":  0,
+                                              "customSize":  false,
+                                              "height":  0,
+                                              "layer":  "",
+                                              "locked":  false,
+                                              "name":  "SplashMessage",
+                                              "width":  0,
+                                              "x":  120,
+                                              "y":  900,
+                                              "zOrder":  1,
+                                              "numberProperties":  [
+
+                                                                   ],
+                                              "stringProperties":  [
+
+                                                                   ],
+                                              "initialVariables":  [
+
+                                                                   ]
+                                          }
+                                      ],
+                        "objects":  [
+                                        {
+                                            "name":  "SplashImage",
+                                            "tags":  "",
+                                            "type":  "Sprite",
+                                            "updateIfNotVisible":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+
+                                                          ],
+                                            "animations":  [
+                                                               {
+                                                                   "name":  "",
+                                                                   "useMultipleDirections":  false,
+                                                                   "directions":  [
+                                                                                      {
+                                                                                          "looping":  false,
+                                                                                          "timeBetweenFrames":  0.08,
+                                                                                          "sprites":  [
+                                                                                                          {
+                                                                                                              "hasCustomCollisionMask":  false,
+                                                                                                              "image":  "compass-rose-mosaic-medallion.jpg",
+                                                                                                              "points":  [
+
+                                                                                                                         ],
+                                                                                                              "originPoint":  {
+                                                                                                                                  "name":  "origine",
+                                                                                                                                  "x":  0,
+                                                                                                                                  "y":  0
+                                                                                                                              },
+                                                                                                              "centerPoint":  {
+                                                                                                                                  "automatic":  true,
+                                                                                                                                  "name":  "centre",
+                                                                                                                                  "x":  0,
+                                                                                                                                  "y":  0
+                                                                                                                              },
+                                                                                                              "customCollisionMask":  [
+
+                                                                                                                                      ]
+                                                                                                          }
+                                                                                                      ]
+                                                                                      }
+                                                                                  ]
+                                                               }
+                                                           ]
+                                        },
+                                        {
+                                            "bold":  false,
+                                            "italic":  false,
+                                            "name":  "SplashMessage",
+                                            "smoothed":  true,
+                                            "tags":  "",
+                                            "type":  "TextObject::Text",
+                                            "underlined":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+
+                                                          ],
+                                            "string":  "Compass loading...",
+                                            "font":  "Roman SD.ttf",
+                                            "characterSize":  72,
+                                            "color":  {
+                                                          "b":  231,
+                                                          "g":  231,
+                                                          "r":  231
+                                                      }
+                                        }
+                                    ],
+                        "events":  [
+                                       {
+                                           "disabled":  false,
+                                           "folded":  false,
+                                           "type":  "BuiltinCommonInstructions::Comment",
+                                           "color":  {
+                                                         "b":  109,
+                                                         "g":  230,
+                                                         "r":  255,
+                                                         "textB":  0,
+                                                         "textG":  0,
+                                                         "textR":  0
+                                                     },
+                                           "comment":  "Display splash screen before showing compass scene",
+                                           "comment2":  ""
+                                       },
+                                       {
+                                           "disabled":  false,
+                                           "folded":  false,
+                                           "type":  "BuiltinCommonInstructions::JsCode",
+                                           "inlineCode":  "\nif (gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene)) {\n  gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, \"SplashDelay\");\n}\n\nif (gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, \"SplashDelay\") \u003e= 5) {\n  if (runtimeScene.getOnceTriggers().triggerOnce(183746593)) {\n    gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, \"NewScene\", false);\n  }\n}",
+                                           "parameterObjects":  "",
+                                           "useStrict":  true
+                                       }
+                                   ],
+                        "layers":  [
+                                       {
+                                           "name":  "",
+                                           "visibility":  true,
+                                           "cameras":  [
+                                                           {
+                                                               "defaultSize":  true,
+                                                               "defaultViewport":  true,
+                                                               "height":  0,
+                                                               "viewportBottom":  1,
+                                                               "viewportLeft":  0,
+                                                               "viewportRight":  1,
+                                                               "viewportTop":  0,
+                                                               "width":  0
+                                                           }
+                                                       ],
+                                           "effects":  [
+
+                                                       ]
+                                       }
+                                   ],
+                        "behaviorsSharedData":  [
+
+                                                ]
+                    },
                     {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": "\nconst obj = eventsFunctionContext.getObjects('Object');\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
-                      "parameterObjects": "",
-                      "useStrict": true
+                        "b":  0,
+                        "disableInputWhenNotFocused":  true,
+                        "mangledName":  "NewScene",
+                        "name":  "NewScene",
+                        "oglFOV":  90,
+                        "oglZFar":  500,
+                        "oglZNear":  1,
+                        "r":  0,
+                        "standardSortMethod":  true,
+                        "stopSoundsOnStartup":  true,
+                        "title":  "",
+                        "v":  0,
+                        "uiSettings":  {
+                                           "grid":  false,
+                                           "gridB":  255,
+                                           "gridG":  180,
+                                           "gridHeight":  32,
+                                           "gridOffsetX":  0,
+                                           "gridOffsetY":  0,
+                                           "gridR":  158,
+                                           "gridWidth":  32,
+                                           "snap":  true,
+                                           "windowMask":  false,
+                                           "zoomFactor":  0.28
+                                       },
+                        "objectsGroups":  [
+
+                                          ],
+                        "variables":  [
+
+                                      ],
+                        "instances":  [
+                                          {
+                                              "angle":  0,
+                                              "customSize":  true,
+                                              "height":  1658,
+                                              "layer":  "",
+                                              "locked":  false,
+                                              "name":  "RomanCompass",
+                                              "width":  1942,
+                                              "x":  -391,
+                                              "y":  -206,
+                                              "zOrder":  1,
+                                              "numberProperties":  [
+
+                                                                   ],
+                                              "stringProperties":  [
+
+                                                                   ],
+                                              "initialVariables":  [
+
+                                                                   ]
+                                          },
+                                          {
+                                              "angle":  0,
+                                              "customSize":  false,
+                                              "height":  0,
+                                              "layer":  "",
+                                              "locked":  false,
+                                              "name":  "GPSOutput",
+                                              "width":  0,
+                                              "x":  29,
+                                              "y":  1448,
+                                              "zOrder":  2,
+                                              "numberProperties":  [
+
+                                                                   ],
+                                              "stringProperties":  [
+
+                                                                   ],
+                                              "initialVariables":  [
+
+                                                                   ]
+                                          },
+                                          {
+                                              "angle":  0,
+                                              "customSize":  false,
+                                              "height":  0,
+                                              "layer":  "",
+                                              "locked":  false,
+                                              "name":  "Abs",
+                                              "width":  0,
+                                              "x":  34,
+                                              "y":  1187,
+                                              "zOrder":  3,
+                                              "numberProperties":  [
+
+                                                                   ],
+                                              "stringProperties":  [
+
+                                                                   ],
+                                              "initialVariables":  [
+
+                                                                   ]
+                                          },
+                                          {
+                                              "angle":  0,
+                                              "customSize":  false,
+                                              "height":  0,
+                                              "layer":  "",
+                                              "locked":  false,
+                                              "name":  "Naked",
+                                              "width":  0,
+                                              "x":  7,
+                                              "y":  1579,
+                                              "zOrder":  4,
+                                              "numberProperties":  [
+
+                                                                   ],
+                                              "stringProperties":  [
+
+                                                                   ],
+                                              "initialVariables":  [
+
+                                                                   ]
+                                          }
+                                      ],
+                        "objects":  [
+                                        {
+                                            "name":  "RomanCompass",
+                                            "tags":  "",
+                                            "type":  "Sprite",
+                                            "updateIfNotVisible":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+
+                                                          ],
+                                            "animations":  [
+                                                               {
+                                                                   "name":  "",
+                                                                   "useMultipleDirections":  false,
+                                                                   "directions":  [
+                                                                                      {
+                                                                                          "looping":  false,
+                                                                                          "timeBetweenFrames":  0.08,
+                                                                                          "sprites":  [
+                                                                                                          {
+                                                                                                              "hasCustomCollisionMask":  false,
+                                                                                                              "image":  "CompasStar.png",
+                                                                                                              "points":  [
+
+                                                                                                                         ],
+                                                                                                              "originPoint":  {
+                                                                                                                                  "name":  "origine",
+                                                                                                                                  "x":  0,
+                                                                                                                                  "y":  0
+                                                                                                                              },
+                                                                                                              "centerPoint":  {
+                                                                                                                                  "automatic":  true,
+                                                                                                                                  "name":  "centre",
+                                                                                                                                  "x":  0,
+                                                                                                                                  "y":  0
+                                                                                                                              },
+                                                                                                              "customCollisionMask":  [
+
+                                                                                                                                      ]
+                                                                                                          }
+                                                                                                      ]
+                                                                                      }
+                                                                                  ]
+                                                               }
+                                                           ]
+                                        },
+                                        {
+                                            "name":  "Player",
+                                            "tags":  "",
+                                            "type":  "Sprite",
+                                            "updateIfNotVisible":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+                                                              {
+                                                                  "name":  "Compass",
+                                                                  "type":  "GeoLocation::Compass",
+                                                                  "Lattitude":  0,
+                                                                  "Longitude":  0
+                                                              }
+                                                          ],
+                                            "animations":  [
+
+                                                           ]
+                                        },
+                                        {
+                                            "bold":  false,
+                                            "italic":  false,
+                                            "name":  "GPSOutput",
+                                            "smoothed":  true,
+                                            "tags":  "",
+                                            "type":  "TextObject::Text",
+                                            "underlined":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+                                                              {
+                                                                  "name":  "Compass",
+                                                                  "type":  "GeoLocation::Compass",
+                                                                  "Lattitude":  0,
+                                                                  "Longitude":  0
+                                                              }
+                                                          ],
+                                            "string":  "Lattitude and Longitude readout",
+                                            "font":  "Roman SD.ttf",
+                                            "characterSize":  50,
+                                            "color":  {
+                                                          "b":  28,
+                                                          "g":  231,
+                                                          "r":  248
+                                                      }
+                                        },
+                                        {
+                                            "bold":  false,
+                                            "italic":  false,
+                                            "name":  "Abs",
+                                            "smoothed":  true,
+                                            "tags":  "",
+                                            "type":  "TextObject::Text",
+                                            "underlined":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+
+                                                          ],
+                                            "string":  "WAITING",
+                                            "font":  "",
+                                            "characterSize":  40,
+                                            "color":  {
+                                                          "b":  28,
+                                                          "g":  231,
+                                                          "r":  248
+                                                      }
+                                        },
+                                        {
+                                            "bold":  false,
+                                            "italic":  false,
+                                            "name":  "Naked",
+                                            "smoothed":  true,
+                                            "tags":  "",
+                                            "type":  "TextObject::Text",
+                                            "underlined":  false,
+                                            "variables":  [
+
+                                                          ],
+                                            "behaviors":  [
+
+                                                          ],
+                                            "string":  "Waiting",
+                                            "font":  "",
+                                            "characterSize":  60,
+                                            "color":  {
+                                                          "b":  28,
+                                                          "g":  231,
+                                                          "r":  248
+                                                      }
+                                        }
+                                    ],
+                        "events":  [
+                                       {
+                                           "disabled":  false,
+                                           "folded":  false,
+                                           "type":  "BuiltinCommonInstructions::Comment",
+                                           "color":  {
+                                                         "b":  109,
+                                                         "g":  230,
+                                                         "r":  255,
+                                                         "textB":  0,
+                                                         "textG":  0,
+                                                         "textR":  0
+                                                     },
+                                           "comment":  "Decive orientation - compass example",
+                                           "comment2":  ""
+                                       },
+                                       {
+                                           "disabled":  false,
+                                           "folded":  false,
+                                           "type":  "BuiltinCommonInstructions::Standard",
+                                           "conditions":  [
+
+                                                          ],
+                                           "actions":  [
+                                                           {
+                                                               "type":  {
+                                                                            "inverted":  false,
+                                                                            "value":  "TextObject::String"
+                                                                        },
+                                                               "parameters":  [
+                                                                                  "GPSOutput",
+                                                                                  "=",
+                                                                                  "GPSOutput.VariableString(CompassHeading)"
+                                                                              ],
+                                                               "subInstructions":  [
+
+                                                                                   ]
+                                                           },
+                                                           {
+                                                               "type":  {
+                                                                            "inverted":  false,
+                                                                            "value":  "TextObject::String"
+                                                                        },
+                                                               "parameters":  [
+                                                                                  "Abs",
+                                                                                  "=",
+                                                                                  "GPSOutput.VariableString(CompassMessage)"
+                                                                              ],
+                                                               "subInstructions":  [
+
+                                                                                   ]
+                                                           },
+                                                           {
+                                                               "type":  {
+                                                                            "inverted":  false,
+                                                                            "value":  "TextObject::String"
+                                                                        },
+                                                               "parameters":  [
+                                                                                  "Naked",
+                                                                                  "=",
+                                                                                  "GPSOutput.VariableString(NakedCompassHeading)"
+                                                                              ],
+                                                               "subInstructions":  [
+
+                                                                                   ]
+                                                           }
+                                                       ],
+                                           "events":  [
+
+                                                      ]
+                                       },
+                                       {
+                                           "disabled":  false,
+                                           "folded":  false,
+                                           "type":  "BuiltinCommonInstructions::Standard",
+                                           "conditions":  [
+
+                                                          ],
+                                           "actions":  [
+                                                           {
+                                                               "type":  {
+                                                                            "inverted":  false,
+                                                                            "value":  "SetAngle"
+                                                                        },
+                                                               "parameters":  [
+                                                                                  "RomanCompass",
+                                                                                  "=",
+                                                                                  "GPSOutput.Variable(CompassHeading)"
+                                                                              ],
+                                                               "subInstructions":  [
+
+                                                                                   ]
+                                                           }
+                                                       ],
+                                           "events":  [
+
+                                                      ]
+                                       }
+                                   ],
+                        "layers":  [
+                                       {
+                                           "name":  "",
+                                           "visibility":  true,
+                                           "cameras":  [
+                                                           {
+                                                               "defaultSize":  true,
+                                                               "defaultViewport":  true,
+                                                               "height":  0,
+                                                               "viewportBottom":  1,
+                                                               "viewportLeft":  0,
+                                                               "viewportRight":  1,
+                                                               "viewportTop":  0,
+                                                               "width":  0
+                                                           }
+                                                       ],
+                                           "effects":  [
+
+                                                       ]
+                                       }
+                                   ],
+                        "behaviorsSharedData":  [
+                                                    {
+                                                        "name":  "Compass",
+                                                        "type":  "GeoLocation::Compass"
+                                                    }
+                                                ]
                     }
-                  ]
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "GeoLocation::Compass",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "",
-              "fullName": "",
-              "functionType": "Action",
-              "name": "onCreated",
-              "sentence": "",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "\\nconst [compassObject] = eventsFunctionContext.getObjects(\"Object\");\nif (!compassObject) {\n  return;\n}\n\nconst variables = compassObject.getVariables();\nconst compassVar = variables.get(\"CompassHeading\");\nconst nakedVar = variables.get(\"NakedCompassHeading\");\nconst messageVar = variables.get(\"CompassMessage\");\n\nif (!compassVar || !nakedVar || !messageVar) {\n  return;\n}\n\nconst normalizeHeading = (heading) => {\n  if (typeof heading !== \"number\" || Number.isNaN(heading)) {\n    return null;\n  }\n\n  const wrapped = ((heading % 360) + 360) % 360;\n  return {\n    raw: wrapped,\n    compass: (360 - wrapped + 360) % 360\n  };\n};\n\nconst handleOrientation = (event) => {\n  const heading = typeof event.webkitCompassHeading === \"number\"\n    ? event.webkitCompassHeading\n    : typeof event.alpha === \"number\"\n      ? event.alpha\n      : null;\n\n  const result = normalizeHeading(heading);\n  if (!result) {\n    return;\n  }\n\n  compassVar.setNumber(result.compass);\n  nakedVar.setNumber(result.raw);\n};\n\nconst registrationKey = \"__compassOrientationRegistration__\";\nif (!window.DeviceOrientationEvent) {\n  messageVar.setString(\"Device orientation unsupported\");\n  compassVar.setNumber(400);\n  nakedVar.setNumber(0);\n  return;\n}\n\nconst useAbsolute = \"ondeviceorientationabsolute\" in window;\nmessageVar.setString(useAbsolute ? \"Absolute orientation\" : \"Relative orientation\");\n\nconst eventName = useAbsolute ? \"deviceorientationabsolute\" : \"deviceorientation\";\nconst useCapture = useAbsolute;\n\nconst previousRegistration = window[registrationKey];\nif (previousRegistration) {\n  window.removeEventListener(\n    previousRegistration.eventName,\n    previousRegistration.handler,\n    previousRegistration.useCapture\n  );\n}\n\nconst registration = {\n  eventName,\n  handler: handleOrientation,\n  useCapture\n};\n\nwindow[registrationKey] = registration;\nwindow.addEventListener(eventName, handleOrientation, useCapture);",
-                  "parameterObjects": "",
-                  "useStrict": true
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "GeoLocation::Compass",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            }
-          ],
-          "propertyDescriptors": [
-            {
-              "value": "",
-              "type": "Number",
-              "label": "The lattitude we are pointing to",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "Latitude"
-            },
-            {
-              "value": "",
-              "type": "Number",
-              "label": "The longitude we are pointing to",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "Longitude"
-            },
-            {
-              "value": "No GPS Signal",
-              "type": "String",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "GPSMessage"
-            },
-            {
-              "value": "100",
-              "type": "Number",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "UpdateTimer"
-            },
-            {
-              "value": "",
-              "type": "Number",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "CompassHeading"
-            },
-            {
-              "value": "",
-              "type": "String",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "CompassMessage"
-            },
-            {
-              "value": "",
-              "type": "Number",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "NakedCompassHeading"
-            },
-            {
-              "value": "",
-              "type": "Number",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "Property"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "externalLayouts": [],
-  "externalSourceFiles": []
+                ],
+    "externalEvents":  [
+
+                       ],
+    "eventsFunctionsExtensions":  [
+                                      {
+                                          "author":  "",
+                                          "description":  "",
+                                          "extensionNamespace":  "",
+                                          "fullName":  "",
+                                          "name":  "GeoLocation",
+                                          "shortDescription":  "",
+                                          "tags":  "",
+                                          "version":  "",
+                                          "eventsFunctions":  [
+
+                                                              ],
+                                          "eventsBasedBehaviors":  [
+                                                                       {
+                                                                           "description":  "",
+                                                                           "fullName":  "",
+                                                                           "name":  "Compass",
+                                                                           "objectType":  "",
+                                                                           "eventsFunctions":  [
+                                                                                                   {
+                                                                                                       "description":  "",
+                                                                                                       "fullName":  "",
+                                                                                                       "functionType":  "Action",
+                                                                                                       "name":  "doStepPreEvents",
+                                                                                                       "sentence":  "",
+                                                                                                       "events":  [
+                                                                                                                      {
+                                                                                                                          "disabled":  false,
+                                                                                                                          "folded":  false,
+                                                                                                                          "type":  "BuiltinCommonInstructions::Comment",
+                                                                                                                          "color":  {
+                                                                                                                                        "b":  109,
+                                                                                                                                        "g":  230,
+                                                                                                                                        "r":  255,
+                                                                                                                                        "textB":  0,
+                                                                                                                                        "textG":  0,
+                                                                                                                                        "textR":  0
+                                                                                                                                    },
+                                                                                                                          "comment":  "Updating the timer to count in milliseconds so updates for GPS are called once every second (1000 milliseconds). UpdateTimer is the timer variable and is found in behaviour properties",
+                                                                                                                          "comment2":  ""
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "disabled":  false,
+                                                                                                                          "folded":  false,
+                                                                                                                          "type":  "BuiltinCommonInstructions::Standard",
+                                                                                                                          "conditions":  [
+
+                                                                                                                                         ],
+                                                                                                                          "actions":  [
+                                                                                                                                          {
+                                                                                                                                              "type":  {
+                                                                                                                                                           "inverted":  false,
+                                                                                                                                                           "value":  "ModVarObjet"
+                                                                                                                                                       },
+                                                                                                                                              "parameters":  [
+                                                                                                                                                                 "Object",
+                                                                                                                                                                 "UpdateTimer",
+                                                                                                                                                                 "+",
+                                                                                                                                                                 "1000*TimeDelta()"
+                                                                                                                                                             ],
+                                                                                                                                              "subInstructions":  [
+
+                                                                                                                                                                  ]
+                                                                                                                                          }
+                                                                                                                                      ],
+                                                                                                                          "events":  [
+
+                                                                                                                                     ]
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "disabled":  false,
+                                                                                                                          "folded":  false,
+                                                                                                                          "type":  "BuiltinCommonInstructions::Comment",
+                                                                                                                          "color":  {
+                                                                                                                                        "b":  109,
+                                                                                                                                        "g":  230,
+                                                                                                                                        "r":  255,
+                                                                                                                                        "textB":  0,
+                                                                                                                                        "textG":  0,
+                                                                                                                                        "textR":  0
+                                                                                                                                    },
+                                                                                                                          "comment":  "If timer expires call the GPS Lattitude and Longitude",
+                                                                                                                          "comment2":  ""
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "disabled":  false,
+                                                                                                                          "folded":  false,
+                                                                                                                          "type":  "BuiltinCommonInstructions::Standard",
+                                                                                                                          "conditions":  [
+                                                                                                                                             {
+                                                                                                                                                 "type":  {
+                                                                                                                                                              "inverted":  false,
+                                                                                                                                                              "value":  "VarObjet"
+                                                                                                                                                          },
+                                                                                                                                                 "parameters":  [
+                                                                                                                                                                    "Object",
+                                                                                                                                                                    "UpdateTimer",
+                                                                                                                                                                    "\u003e",
+                                                                                                                                                                    "1000"
+                                                                                                                                                                ],
+                                                                                                                                                 "subInstructions":  [
+
+                                                                                                                                                                     ]
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                          "actions":  [
+                                                                                                                                          {
+                                                                                                                                              "type":  {
+                                                                                                                                                           "inverted":  false,
+                                                                                                                                                           "value":  "ModVarObjet"
+                                                                                                                                                       },
+                                                                                                                                              "parameters":  [
+                                                                                                                                                                 "Object",
+                                                                                                                                                                 "UpdateTimer",
+                                                                                                                                                                 "=",
+                                                                                                                                                                 "0"
+                                                                                                                                                             ],
+                                                                                                                                              "subInstructions":  [
+
+                                                                                                                                                                  ]
+                                                                                                                                          }
+                                                                                                                                      ],
+                                                                                                                          "events":  [
+                                                                                                                                         {
+                                                                                                                                             "disabled":  false,
+                                                                                                                                             "folded":  false,
+                                                                                                                                             "type":  "BuiltinCommonInstructions::JsCode",
+                                                                                                                                             "inlineCode":  "\nconst obj = eventsFunctionContext.getObjects(\u0027Object\u0027);\nvar localLat = obj[0].getVariables().get(\"Latitude\");\nvar localLong = obj[0].getVariables().get(\"Longitude\");\nvar localMessage = obj[0].getVariables().get(\"GPSMessage\");\n\n\nfunction updatePos(position) {\n    localMessage.setString(\"Strong GPS Signal\");\n    localLat.setNumber(position.coords.latitude);\n    localLong.setNumber(position.coords.longitude);\n}\n\nfunction failedUpdate(error) {\n    localMessage.setString(\"No GPS Signal\");\n}\n\nnavigator.geolocation.getCurrentPosition(updatePos, failedUpdate);",
+                                                                                                                                             "parameterObjects":  "",
+                                                                                                                                             "useStrict":  true
+                                                                                                                                         }
+                                                                                                                                     ]
+                                                                                                                      }
+                                                                                                                  ],
+                                                                                                       "parameters":  [
+                                                                                                                          {
+                                                                                                                              "codeOnly":  false,
+                                                                                                                              "defaultValue":  "",
+                                                                                                                              "description":  "Object",
+                                                                                                                              "longDescription":  "",
+                                                                                                                              "name":  "Object",
+                                                                                                                              "optional":  false,
+                                                                                                                              "supplementaryInformation":  "",
+                                                                                                                              "type":  "object"
+                                                                                                                          },
+                                                                                                                          {
+                                                                                                                              "codeOnly":  false,
+                                                                                                                              "defaultValue":  "",
+                                                                                                                              "description":  "Behavior",
+                                                                                                                              "longDescription":  "",
+                                                                                                                              "name":  "Behavior",
+                                                                                                                              "optional":  false,
+                                                                                                                              "supplementaryInformation":  "GeoLocation::Compass",
+                                                                                                                              "type":  "behavior"
+                                                                                                                          }
+                                                                                                                      ],
+                                                                                                       "objectGroups":  [
+
+                                                                                                                        ]
+                                                                                                   },
+                                                                                                   {
+                                                                                                       "description":  "",
+                                                                                                       "fullName":  "",
+                                                                                                       "functionType":  "Action",
+                                                                                                       "name":  "onCreated",
+                                                                                                       "sentence":  "",
+                                                                                                       "events":  [
+                                                                                                                      {
+                                                                                                                          "disabled":  false,
+                                                                                                                          "folded":  false,
+                                                                                                                          "type":  "BuiltinCommonInstructions::Comment",
+                                                                                                                          "color":  {
+                                                                                                                                        "b":  109,
+                                                                                                                                        "g":  230,
+                                                                                                                                        "r":  255,
+                                                                                                                                        "textB":  0,
+                                                                                                                                        "textG":  0,
+                                                                                                                                        "textR":  0
+                                                                                                                                    },
+                                                                                                                          "comment":  "",
+                                                                                                                          "comment2":  ""
+                                                                                                                      },
+                                                                                                                      {
+                                                                                                                          "disabled":  false,
+                                                                                                                          "folded":  false,
+                                                                                                                          "type":  "BuiltinCommonInstructions::JsCode",
+                                                                                                                          "inlineCode":  "\\nconst [compassObject] = eventsFunctionContext.getObjects(\"Object\");\nif (!compassObject) {\n  return;\n}\n\nconst variables = compassObject.getVariables();\nconst compassVar = variables.get(\"CompassHeading\");\nconst nakedVar = variables.get(\"NakedCompassHeading\");\nconst messageVar = variables.get(\"CompassMessage\");\n\nif (!compassVar || !nakedVar || !messageVar) {\n  return;\n}\n\nconst normalizeHeading = (heading) =\u003e {\n  if (typeof heading !== \"number\" || Number.isNaN(heading)) {\n    return null;\n  }\n\n  const wrapped = ((heading % 360) + 360) % 360;\n  return {\n    raw: wrapped,\n    compass: (360 - wrapped + 360) % 360\n  };\n};\n\nconst handleOrientation = (event) =\u003e {\n  const heading = typeof event.webkitCompassHeading === \"number\"\n    ? event.webkitCompassHeading\n    : typeof event.alpha === \"number\"\n      ? event.alpha\n      : null;\n\n  const result = normalizeHeading(heading);\n  if (!result) {\n    return;\n  }\n\n  compassVar.setNumber(result.compass);\n  nakedVar.setNumber(result.raw);\n};\n\nconst registrationKey = \"__compassOrientationRegistration__\";\nif (!window.DeviceOrientationEvent) {\n  messageVar.setString(\"Device orientation unsupported\");\n  compassVar.setNumber(400);\n  nakedVar.setNumber(0);\n  return;\n}\n\nconst useAbsolute = \"ondeviceorientationabsolute\" in window;\nmessageVar.setString(useAbsolute ? \"Absolute orientation\" : \"Relative orientation\");\n\nconst eventName = useAbsolute ? \"deviceorientationabsolute\" : \"deviceorientation\";\nconst useCapture = useAbsolute;\n\nconst previousRegistration = window[registrationKey];\nif (previousRegistration) {\n  window.removeEventListener(\n    previousRegistration.eventName,\n    previousRegistration.handler,\n    previousRegistration.useCapture\n  );\n}\n\nconst registration = {\n  eventName,\n  handler: handleOrientation,\n  useCapture\n};\n\nwindow[registrationKey] = registration;\nwindow.addEventListener(eventName, handleOrientation, useCapture);",
+                                                                                                                          "parameterObjects":  "",
+                                                                                                                          "useStrict":  true
+                                                                                                                      }
+                                                                                                                  ],
+                                                                                                       "parameters":  [
+                                                                                                                          {
+                                                                                                                              "codeOnly":  false,
+                                                                                                                              "defaultValue":  "",
+                                                                                                                              "description":  "Object",
+                                                                                                                              "longDescription":  "",
+                                                                                                                              "name":  "Object",
+                                                                                                                              "optional":  false,
+                                                                                                                              "supplementaryInformation":  "",
+                                                                                                                              "type":  "object"
+                                                                                                                          },
+                                                                                                                          {
+                                                                                                                              "codeOnly":  false,
+                                                                                                                              "defaultValue":  "",
+                                                                                                                              "description":  "Behavior",
+                                                                                                                              "longDescription":  "",
+                                                                                                                              "name":  "Behavior",
+                                                                                                                              "optional":  false,
+                                                                                                                              "supplementaryInformation":  "GeoLocation::Compass",
+                                                                                                                              "type":  "behavior"
+                                                                                                                          }
+                                                                                                                      ],
+                                                                                                       "objectGroups":  [
+
+                                                                                                                        ]
+                                                                                                   }
+                                                                                               ],
+                                                                           "propertyDescriptors":  [
+                                                                                                       {
+                                                                                                           "value":  "",
+                                                                                                           "type":  "Number",
+                                                                                                           "label":  "The lattitude we are pointing to",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "Latitude"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "",
+                                                                                                           "type":  "Number",
+                                                                                                           "label":  "The longitude we are pointing to",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "Longitude"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "No GPS Signal",
+                                                                                                           "type":  "String",
+                                                                                                           "label":  "",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "GPSMessage"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "100",
+                                                                                                           "type":  "Number",
+                                                                                                           "label":  "",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "UpdateTimer"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "",
+                                                                                                           "type":  "Number",
+                                                                                                           "label":  "",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "CompassHeading"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "",
+                                                                                                           "type":  "String",
+                                                                                                           "label":  "",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "CompassMessage"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "",
+                                                                                                           "type":  "Number",
+                                                                                                           "label":  "",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "NakedCompassHeading"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "value":  "",
+                                                                                                           "type":  "Number",
+                                                                                                           "label":  "",
+                                                                                                           "description":  "",
+                                                                                                           "extraInformation":  [
+
+                                                                                                                                ],
+                                                                                                           "hidden":  false,
+                                                                                                           "name":  "Property"
+                                                                                                       }
+                                                                                                   ]
+                                                                       }
+                                                                   ]
+                                      }
+                                  ],
+    "externalLayouts":  [
+
+                        ],
+    "externalSourceFiles":  [
+
+                            ]
 }
